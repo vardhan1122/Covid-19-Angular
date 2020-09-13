@@ -1,0 +1,28 @@
+
+<div *ngIf="selectedState;else elseBlock"></div>
+  <ng-template #elseBlock><strong>Click any row and See Updated State Info...</strong></ng-template>
+
+<div class="card mt-3 position-fixed" *ngIf="selectedState">
+  <div class="card-header bg-primary text-white">
+    <div class="text-left">
+      <span>State's New Updates</span>
+    </div>
+    <div class="text-right text-dark">
+      <span>{{selectedState.region}}</span>
+    </div>
+  </div>
+  <div class="card-body text-center">
+    <ul class="list-group text-left">
+      <li class="list-group-item bg-danger text-white">
+        Infected : {{selectedState.newInfected}}
+      </li>
+      <li class="list-group-item bg-success">
+        Recovered : {{selectedState.newRecovered}}
+       </li>
+      <li class="list-group-item bg-dark text-white">
+        Deceased : {{selectedState.newDeceased}}
+      </li>
+    </ul>
+  </div>
+</div>
+

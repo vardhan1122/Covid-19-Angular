@@ -1,0 +1,44 @@
+<div class="container-fluid mt-3">
+
+      <div class="row ml-5">
+        <p class="h3">COVID-19 WORLD
+          <sup>
+            <span class="ml-2 mr-3"><span class="new">New</span> Deaths <h1 class="badge badge-dark">{{covidWorldTotal.regionData[0].newDeaths}}</h1></span>
+            <span class="mr-3">Confirmed <h1 class="badge badge-success">{{covidWorldTotal.regionData[0].newCases}}</h1></span>
+            <span class="mr-3">SeriousCritical <h1 class="badge badge-danger">{{covidWorldTotal.regionData[0].seriousCritical}}</h1></span>
+          </sup>
+        </p>
+      </div>
+
+
+      <section class="total">
+        <div class="row">
+          <div class="col-sm-3">
+            <h1 class="badge badge-dark">{{covidWorldTotal.regionData[0].totalDeaths}}</h1><br>
+            <span class="sect-text">TOTAL DEATHS</span>
+          </div>
+          <div class="col-sm-3">
+            <h1 class="badge badge-success">{{covidWorldTotal.regionData[0].totalRecovered}}</h1><br>
+            <span class="sect-text">TOTAL RECOVERED</span>
+          </div>
+          <div class="col-sm-3">
+            <h1 class="badge badge-warning">{{covidWorldTotal.regionData[0].activeCases}}</h1><br>
+            <span class="sect-text">TOTAL ACTIVE CASES</span>
+          </div>
+          <div class="col-sm-3">
+            <h1 class="badge badge-danger">{{covidWorldTotal.regionData[0].totalCases}}</h1><br>
+            <span class="sect-text">TOTAL CONFIRM CASES</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+      <hr>
+
+  <div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-md">
+      <app-covid-world-list></app-covid-world-list>
+    </div>
+  </div>
+</div>

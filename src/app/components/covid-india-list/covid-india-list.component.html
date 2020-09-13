@@ -1,0 +1,39 @@
+<div class="container mt-1">
+  <div class="row mt-1">
+    <div class="col-sm">
+
+      <div id="table-wrapper">
+        <div id="table-scroll">
+          <table class="table table-hover text-center table-striped table-light">
+            <thead class="bg-info text-white">
+              <tr>
+                <th>SNO</th>
+                <th>STATE</th>
+                <th>DECEASED</th>
+                <th>RECOVERED</th>
+                <th>ACTIVE</th>
+                <th>CONFIRMED</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let covidInd of covidIndia.regionData; let i = index" (click)="clickContact(covidInd)">
+                <td>{{i + 1}}</td>
+                <td>{{covidInd.region}}</td>
+                <td>{{covidInd.deceased}}</td>
+                <td>{{covidInd.recovered}}</td>
+                <td>{{covidInd.totalInfected}}</td>
+                <td>{{covidInd.deceased+covidInd.recovered+covidInd.totalInfected}}</td>
+              </tr>
+              <tr *ngIf="errorMessage">
+                <td colspan="6" class="text-danger">
+                  {{errorMessage}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

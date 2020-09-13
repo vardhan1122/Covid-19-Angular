@@ -1,0 +1,20 @@
+
+.bg-covid{
+  background-image: url("../../images/bg-covid.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* height: 130vh; */
+  filter: brightness(100%);
+  /* opacity: 0.8; */
+ 
+}
+
+.history{
+font-size: bold;
+/* color:rgb(144, 9, 32); */
+}
+
+.heighlet{
+  color:yellow;
+}

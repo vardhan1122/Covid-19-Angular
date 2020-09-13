@@ -1,0 +1,56 @@
+<div class="container-fluid mt-3">
+
+  <div class="row ml-5">
+    <div class="col-sm">
+    <p class="h3">COVID-19 INDIA
+      
+      <sup>
+        <span class="ml-2 mr-3"><span class="new">New</span> Deaths <h1 class="badge badge-dark">{{covidIndia.deathsNew}}</h1></span>
+        <span class="mr-3">Recovered <h1 class="badge badge-success">{{covidIndia.recoveredNew}}</h1></span>
+        <span class="mr-3">confirmed <h1 class="badge badge-danger">{{covidIndia.activeCasesNew}}</h1></span>
+      </sup>
+    </p>
+
+    <p class="h4 date text-right">Recent Updation : <span class="date-color">{{covidIndia.lastUpdatedAtApify}}</span></p>
+    </div>
+  </div>
+
+
+  <section class="total">
+    <div class="row">
+      <div class="col-sm-3">
+        <h1 class="badge badge-dark">{{covidIndia.deaths}}</h1><br>
+        <span class="sect-text">TOTAL DEATHS</span>
+      </div>
+      <div class="col-sm-3">
+        <h1 class="badge badge-success">{{covidIndia.recovered}}</h1><br>
+        <span class="sect-text">TOTAL RECOVERED</span>
+      </div>
+      <div class="col-sm-3">
+        <h1 class="badge badge-warning">{{covidIndia.activeCases}}</h1><br>
+        <span class="sect-text">TOTAL ACTIVE CASES</span>
+      </div>
+      <div class="col-sm-3">
+        <h1 class="badge badge-danger">{{covidIndia.totalCases}}</h1><br>
+        <span class="sect-text">TOTAL CONFIRM CASES</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <hr>
+
+  <div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-md-9">
+
+      <app-covid-india-list (sendData)="selectedState=$event" [covidIndiaData]="covidIndia"></app-covid-india-list>
+
+      <!-- <app-covid-india-list></app-covid-india-list> -->
+    </div>
+    <div class="col-md-3">
+      <app-covid-india-card [selectedState]="selectedState"></app-covid-india-card>
+      <!-- <app-covid-india-card></app-covid-india-card> -->
+    </div>
+  </div>
+</div>
